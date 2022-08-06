@@ -11,6 +11,8 @@
   --secondary-black: #1E1E1E;
   --primary-withe: #FFFFFF;
   --rimary-gray: #D9D9D9;
+  --red: #D62828;
+  --yellow: #F77F00;
   /*fonts*/
   --primary-font: 'Quicksand', sans-serif;
   --secondary-font: 'Barlow', sans-serif;
@@ -65,8 +67,125 @@ main {
   backface-visibility: hidden;
 }
 
+/*front side of the card*/
 .front-card {
-  background-color: aquamarine;
+  /*width and height in flip-card-container*/
+  padding: 12px 21px;
+  border-radius: 10px;
+  background: linear-gradient(70.58deg, var(--primary-blue) 0%, var(--lineal-accent) 100%);
+}
+
+.top-content, .middle-content, .bottom-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 33%;
+}
+
+/*front side, top content*/
+.top-content {
+  align-items: center;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-family: var(--primary-font);
+}
+
+.top-content__card-title {
+  font-size: 40px;
+  color: var(--primary-blue);
+}
+
+.top-content__card-text {
+  font-size: 16px;
+  color: var(--primary-black);
+}
+
+/*front side, middle content*/
+.middle-content {
+  /*change flex direction*/
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0.06em;
+  font-family: var(--secondary-font);
+  /*neumorphism and color*/
+  color: rgba(234, 235, 237, 0.5);
+  text-shadow: -1px 1px 2px rgba(97, 98, 98, 0.2), 1px -1px 2px rgba(97, 98, 98, 0.2);
+}
+
+.middle-content__card-number {
+  font-size: 20px;
+}
+
+.middle-content__card-dates {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/*front side, bottom content*/
+.bottom-content {
+  align-items: flex-end;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0.06em;
+  font-family: var(--secondary-font);
+}
+
+.bottom-content__card-user {
+  font-size: 20px;
+  text-transform: uppercase;
+  /*neumorphism and color*/
+  color: rgba(234, 235, 237, 0.5);
+  text-shadow: -1px 1px 2px rgba(97, 98, 98, 0.2), 1px -1px 2px rgba(97, 98, 98, 0.2);
+}
+
+/*maincard logo*/
+.bottom-content__logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 67px;
+  height: 54px;
+}
+
+.logo {
+  position: relative;
+  width: 100%;
+  height: 80%;
+}
+
+.logo__circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.logo__circle--red {
+  background-color: var(--red);
+}
+
+.logo__circle--yellow {
+  left: 35%;
+  background-color: var(--yellow);
+  opacity: 75%;
+}
+
+.bottom-content__logo-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  font-family: var(--primary-font);
+  color: var(--primary-black);
 }
 
 .back-card {
